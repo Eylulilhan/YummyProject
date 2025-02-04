@@ -1,0 +1,35 @@
+﻿@model YummyProject.Models.Message
+@{
+    ViewBag.Title = "DetayMessage";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --Mesaj Detaları--
+</h2>
+<br />
+<form method="post">
+
+
+    @Html.HiddenFor(x => x.MessageId)
+
+    @Html.Label("Ad-Soyad", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    @Html.Label("E-mail", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    @Html.Label("Konu", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mesaj İçeriği", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.MessageContent, new { @class = "form-control" })
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-success" >Okundu Olarak İşaretle</button>
+    </div>
+</form>
+
+

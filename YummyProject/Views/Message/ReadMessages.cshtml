@@ -1,0 +1,40 @@
+﻿@model List<YummyProject.Models.Message>
+@{
+    ViewBag.Title = "ReadMessages";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;  
+}
+
+
+
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --Okunmuş Mesajlar--
+</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Ad-Soyad</th>
+        <th>E-mail</th>
+        <th>Detay</th>
+        <th>SİL</th>
+
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td><a href="/Message/DetayMessage/@item.MessageId" class="btn btn-info">DETAY</a></td>
+            <td><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-danger">SİL</a></td>
+
+        </tr>
+
+    }
+    </table>

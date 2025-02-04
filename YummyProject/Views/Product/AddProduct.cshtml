@@ -1,0 +1,39 @@
+﻿@model YummyProject.Models.Product
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    Yeni Ürün Ekle
+</h2>
+<br />
+<form method="post" enctype="multipart/form-data">
+
+    @Html.Label("Görsel Ekle", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.ImageFile, new { type = "file", @class = "form-control" })
+
+    @Html.Label("Ürür Adı", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.ProductName, new { @class = "form-control" })
+
+    @Html.Label("Malzemeler", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Ingredients, new { @class = "form-control" })
+
+    @Html.Label("Fiyat", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
+
+    @Html.Label("Kategori Seç", new { @style = "color: green;" })
+    @Html.DropDownListFor(x => x.CategoryId,
+    (List<SelectListItem>)ViewBag.categories,
+    "-- Kategori Seç --",
+    new { @class = "form-control", style = "background-color: white; color: black;" })
+
+    <br />
+    <button type="submit" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745; padding: 10px 20px; border-radius: 5px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">
+        Kaydet
+    </button>
+</form>
+
+

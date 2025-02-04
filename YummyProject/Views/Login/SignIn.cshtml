@@ -1,0 +1,112 @@
+﻿@model YummyProject.Models.Admin 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Login Page" />
+    <meta name="author" content="Your Name" />
+    <title>Admin</title>
+    <!-- Styles -->
+    <link href="~/Templates/sb-admin/sb-admin/css/styles.css" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        /* Arka plan görseli */
+        body {
+            background-image: url('/Templates/sb-admin/sb-admin/christmas-wallpaper-2009590_1280.jpg'); /* Görsel yolunu düzenle */
+            background-size: cover; /* Görsel sayfanın tamamını kaplasın */
+            background-repeat: no-repeat; /* Tekrar etmesin */
+            background-position: center; /* Ortalansın */
+            height: 100vh; /* Tam sayfa yüksekliği */
+        }
+
+        /* Kart için şeffaflık */
+        .card {
+            background-color: rgba(255, 255, 255, 0.9); /* Beyaz, %90 opak */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layoutAuthentication">
+        <!-- Main Content -->
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <!-- Card Header -->
+                                <div class="card-header">
+                                    <h3 class="text-center font-weight-light my-4">Admin Giriş</h3>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <form method="post">
+                                        <!-- Username Input -->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="inputUserName" type="text" name ="UserName" placeholder="Kullanıcı Adı :" required />
+                                            <label for="inputUserName">Kullanıcı Adı:</label>
+                                        </div>
+                                        <!-- Password Input -->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="inputPassword" type="password" name="Password" placeholder="Şifre" required />
+                                            <label for="inputPassword">Şifre :</label>
+                                        </div>
+                                        <!-- Remember Me Checkbox -->
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                            <label class="form-check-label" for="inputRememberPassword">Beni Hatırla</label>
+                                        </div>
+                                        <!-- Buttons -->
+                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+
+
+                                            <div class="text-danger">@Html.ValidationSummary()</div><br />
+
+                                            <input type="submit" value="Giriş Yap" class=" btn btn-block btn-primary"/>
+                                        </div>
+                                    </form>
+                                    <br />
+                                    <a href="/Default/Index">Ana Sayfaya Dön</a>
+                                </div>
+                                <!-- Card Footer -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div id="layoutAuthentication_footer">
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; 2025 EYSA Restoran. Tüm hakları saklıdır.</div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/Templates/sb-admin/sb-adminjs/scripts.js"></script>
+</body>
+
+</html>
+

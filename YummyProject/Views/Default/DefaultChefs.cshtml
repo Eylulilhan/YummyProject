@@ -1,0 +1,57 @@
+﻿@model List<YummyProject.Models.Chef>
+
+<section id="chefs"> 
+    <style>
+        .member-img {
+            position: relative;
+        }
+
+            .member-img .social {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                z-index: 100;
+            }
+
+            .member-img:hover .social {
+                opacity: 1;
+            }
+
+        .social a {
+            color: #fff;
+            font-size: 20px;
+            margin-left: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 50%;
+        }
+    </style>
+
+    <div class="container">
+        <div class="row gy-4">
+            @foreach (var _item in Model)
+            {
+                <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="@Url.Content(string.IsNullOrEmpty(_item.ImageUrl) ? "~/path/to/default/image.jpg" : _item.ImageUrl)" class="img-fluid" alt="@_item.Name">
+                            <div class="social">
+                                @foreach (var social in _item.ChefSocials)
+                                {
+                                    <a href="@social.Url" target="_blank"><i class="@social.Icon"></i></a>
+                                }
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>@_item.Name</h4>
+                            <span>@_item.Title</span>
+                            <p>@_item.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

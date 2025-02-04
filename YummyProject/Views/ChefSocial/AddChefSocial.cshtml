@@ -1,0 +1,40 @@
+﻿@model YummyProject.Models.ChefSocial
+
+@{
+    ViewBag.Title = "UpdateChefSocial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --ŞEFLERİMİZ Sosyal Medya Ekle--
+</h2>
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.ChefSocialId) 
+
+    @Html.Label("URL", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Sosyal Medya Adı", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.SocialMediaName, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Sosyal Medya İkonu", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+
+    @Html.Label("Şef Seç", new { @style = "color: green;" })
+    @Html.DropDownListFor(x => x.ChefId,
+        (List<SelectListItem>)ViewBag.Chef,
+        "-- Şef Seç --",
+        new { @class = "form-control", style = "background-color: white; color: black;" })
+    <br />
+
+    <div class="form-group text-center mt-4">
+        <button type="submit" class="btn btn-success btn-lg rounded-pill shadow-sm px-5 py-3">
+            <i class="bi bi-save me-2"></i> Kaydet
+        </button>
+    </div>
+</form>

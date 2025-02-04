@@ -1,0 +1,58 @@
+﻿@model YummyProject.Models.ContactInfo
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    -- İLETİŞİM BİLGİLERİ GÜNCELLEME --
+</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<form method="post">
+
+    <div class="form-group">
+        <label for="Address">Adres:</label>
+        <input type="text" class="form-control" id="Address" name="Address" value="@Model.Address" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Email">E-mail:</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+    </div>
+
+    <div class="form-group">
+        <label for="PhoneNumber">İletişim Numarası:</label>
+        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+    </div>
+
+    <div class="form-group">
+        <label for="MapUrl">Harita Bilgisi (URL):</label>
+        <input type="text" class="form-control" id="MapUrl" name="MapUrl" value="@Model.MapUrl" />
+    </div>
+
+    <div class="form-group">
+        <label for="OpenHours">Açık Olduğu Saatler:</label>
+        <input type="text" class="form-control" id="OpenHours" name="OpenHours" value="@Model.OpenHours" />
+    </div>
+
+    <input type="hidden" name="ContactInfoId" value="@Model.ContactInfoId" />
+
+    <button type="submit" class="btn btn-success mt-3">Güncelle</button>
+    <a href="@Url.Action("Index", "ContactInfo")" class="btn btn-secondary mt-3">İptal</a>
+</form>

@@ -1,0 +1,38 @@
+﻿@model YummyProject.Models.Testimonial  
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --REFERANS EKLE--
+</h2>   
+<br />
+<form method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(x => x.TestimonialId)
+    <div class="form-group">
+        @Html.Label("Görsel Ekle", new { @style = "color: green;" })
+        @Html.TextBoxFor(x => x.ImageFile, new { type = "file", @class = "form-control" })  
+        <div class="form-group">
+            @Html.LabelFor(x => x.NameSurname, new { @style = "color: green;" })
+            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Title, new { @style = "color: green;" })
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Comment, new { @style = "color: green;" })
+            @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.Rating, new { @style = "color: green;" })
+            @Html.TextBoxFor(x => x.Rating, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745; padding: 10px 20px; border-radius: 5px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">
+            Kaydet
+        </button>
+</form> 
+
+

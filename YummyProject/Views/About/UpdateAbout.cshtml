@@ -1,0 +1,42 @@
+﻿@model YummyProject.Models.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --HAKKIMIZDA GÜNCELLEME--
+</h2>
+<br />  
+<form method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(x => x.AboutId)
+
+    @Html.LabelFor(x => x.ImageUrl, "Görsel URL 1")
+    @Html.TextBoxFor(x => x.ImageFile, new { type = "file", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Item1, "Madde 1")
+    @Html.TextBoxFor(x => x.Item1, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Item2, "Madde 2")
+    @Html.TextBoxFor(x => x.Item2, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Item3, "Madde 3")
+    @Html.TextBoxFor(x => x.Item3, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.VideoUrl, "Video URL")
+    @Html.TextBoxFor(x => x.VideoUrl, new { type = "file", @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.PhoneNumber, "Telefon")
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.ImageUrl2, "Görsel URL 2")
+    @Html.TextBoxFor(x => x.ImageFile2, new { type = "file", @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-success btn-lg">
+        Kaydet
+    </button>
+
+
+</form>
+

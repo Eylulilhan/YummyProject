@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<!-- Feature Section -->
+@Html.Action("DefaultFeature")
+<!-- /Hero Section -->
+<!-- About Section -->
+@Html.Action("DefaultAbout")
+<!-- /About Section -->
+<!--  service Section -->
+@Html.Action("DefaultService")<!-- /Why Us Section -->
+<!-- Stats Section -->
+<section id="stats" class="stats section dark-background">
+
+    <img src="~/Templates/yummy-red-1.0.0/assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.EventCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Toplam Etkinlik Sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.ProductCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Toplam Ürün Saysı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.ChefCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Toplam Şef Sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+            <div class="col-lg-3 col-md-6">
+                <div class="stats-item text-center w-100 h-100">
+                    <span data-purecounter-start="0" data-purecounter-end="@ViewBag.ServiceCount" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Toplam Servis Sayısı</p>
+                </div>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+    </div>
+
+</section><!-- /Stats Section -->
+<!-- product Section -->
+@Html.Action("DefaultProduct")<!-- /Menu Section -->
+<!-- Testimonials Section -->
+@Html.Action("DefaultTestimonial")<!-- /Testimonials Section -->
+<!-- Events Section -->
+@Html.Action("DefaultEvent")<!-- /Events Section -->
+<!-- Chefs Section -->
+@Html.Action("DefaultChefs")<!-- Booking Table Section -->
+
+@Html.Action("DefaultBooking")<!-- /Book A Table Section -->
+<!-- photo Gallery Section -->
+@Html.Action("DefaultPhotoGallery")<!-- /Gallery Section -->
+<!-- Contact Section -->
+@Html.Action("DefaultContentInfo")
+<!-- /Contact Section -->

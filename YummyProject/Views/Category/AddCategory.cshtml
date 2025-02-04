@@ -1,0 +1,39 @@
+﻿@model YummyProject.Models.Category 
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold">
+        Kategori Ekle
+    </h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <form asp-action="AddCategory" method="post" class="mt-4 shadow-sm p-4 bg-light rounded">
+        <div class="mb-3">
+            <label for="CategoryName" class="form-label">Kategori Adı</label>
+            <input type="text" class="form-control" id="CategoryName" name="CategoryName" placeholder="Kategori adı giriniz" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+            <i class="fas fa-plus"></i> Kategori Ekle
+        </button>
+    </form>
+</div>
+

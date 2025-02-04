@@ -1,0 +1,60 @@
+﻿@model List<YummyProject.Models.ChefSocial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --ŞEFLERİMİZ Sosyal Medya--
+</h2>
+<br />
+
+<!-- TempData mesajlarının gösterilmesi -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>URL</th>
+        <th>Sosyal Medya</th>
+        <th>İkon</th>
+        <th>Şef_ID</th>
+        <th>GÜNCELLE</th>
+        <th>SİL</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <th>@item.Url</th>
+            <th>@item.SocialMediaName</th>
+            <th>@item.Icon</th>
+            <th>@item.ChefId</th>
+            <td><a href="/ChefSocial/UpdateChefSocial/@item.ChefSocialId" class="btn btn-info">GÜNCELLE</a></td>
+
+            <td>
+                <a href="/Chef/DeleteChefSocial/@item.ChefSocialId" class="btn btn-danger"
+                   onclick="return confirm('Bu sosyal medya hesabını silmek istediğinizden emin misiniz?');">
+                    SİL
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/ChefSocial/AddChefSocial" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff;">Sosyal Medya Ekle</a>

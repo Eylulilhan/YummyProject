@@ -1,0 +1,24 @@
+﻿@model YummyProject.Models.PhotoGallery
+@{
+    ViewBag.Title = "AddPhoto";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --FOTOĞRAF EKLE--   
+</h2>
+
+<form method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(x => x.PhotoGalleryId)
+
+    @Html.Label("Görsel Ekle", new { @style = "color: green;" })
+    @Html.TextBoxFor(x => x.ImageFile, new { type = "file", @class = "form-control" })
+    <br />
+    <button type="submit" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745; padding: 10px 20px; border-radius: 5px; color: white; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">
+        Kaydet
+    </button>
+</form>
+

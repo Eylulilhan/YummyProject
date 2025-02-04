@@ -1,0 +1,81 @@
+﻿@model List<YummyProject.Models.Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --KATEGORİLER--
+</h2>
+
+<!-- Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">
+                    @if (TempData["ErrorMessage"] != null)
+                    {<text>Hata</text>}
+                    @if (TempData["SuccessMessage"] != null)
+                    {<text>Başarılı</text>}
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if (TempData["ErrorMessage"] != null)
+                {
+                    <span class="text-danger">@TempData["ErrorMessage"]</span>
+                }
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <span class="text-success">@TempData["SuccessMessage"]</span>
+                }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>SİL</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.CategoryName</td>
+            <td>
+                <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">SİL</a>
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Category/AddCategory" class="btn btn-primary category-button">
+    <i class="fas fa-plus"></i> Kategori Ekle
+</a>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var modalElement = document.getElementById('messageModal');
+        @if (TempData["ErrorMessage"] != null || TempData["SuccessMessage"] != null)
+        {
+            <text>
+                var modal = new bootstrap.Modal(modalElement);
+                modal.show();
+            </text>
+        }
+    });
+</script>
+
+

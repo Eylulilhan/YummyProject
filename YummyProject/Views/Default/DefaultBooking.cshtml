@@ -1,0 +1,66 @@
+﻿
+<section id="book-a-table" class="book-a-table section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>YUMMY Restorant</h2>
+        <p><span>MASANIZI</span> <span class="description-title">ŞİMDİ AYIRTIN<br></span></p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+            <!-- Left Side: Photo -->
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <div class="card border-0 shadow" style="width: 100%;">
+                    <img src="~/Templates/yummy-red-1.0.0/assets/img/reservation.jpg"
+                         alt="Eysa Restoran Özel Lezzetler"
+                         class="card-img-top rounded">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">YUMMY Restoran</h5>
+                        <p class="card-text">Lezzetli yemeklerimizle tanışın!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Left Side -->
+            <!-- Right Side: Reservation Form -->
+            <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
+                <form method="post">
+                    <div class="row gy-4">
+                        <div class="col-lg-4 col-md-6">
+                            <input type="text" name="Name" class="form-control" id="name" placeholder="Lütfen İsminizi Giriniz" required="">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="email" class="form-control" name="Email" id="email" placeholder="Lütfen e-mail Giriniz" required="">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="text" class="form-control" name="PhoneNumber" id="phone" placeholder="Lütfen Telefon Numarası Giriniz" required="">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="date" name="BookingDate" class="form-control" id="date" placeholder="Rezervasyon" required="">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <input type="number" class="form-control" name="PersonCount" id="people" placeholder="Kaç Kişilik" required="">
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="MessageContent" rows="5" placeholder="Özel olarak iletmek istediğiniz mesajınızı buraya yazabilirsiniz."></textarea>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-success btn-lg rounded-pill shadow-sm px-4 py-2">
+                            <i class="bi bi-calendar-check me-2"></i> Rezervasyon Yap
+                        </button>
+                    </div>
+                </form>
+            </div><!-- End Reservation Form -->
+
+        </div>
+
+    </div>
+
+</section><!-- /Book A Table Section -->

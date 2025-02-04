@@ -1,0 +1,43 @@
+﻿@model List<YummyProject.Models.Service>
+
+<section id="why-us" class="why-us section light-background">
+
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-box">
+                    <h3>Neden YUMMY' yi Seçmelisiniz</h3>
+                    <p>
+                        Yummy, lezzet ve kaliteyi bir araya getirir. En iyi malzemelerle hazırlanan yemeklerimiz, damak tadınızı tatmin etmek için özenle hazırlanır. Yenilikçi menümüz, klasiklerden modern tatlara kadar geniş bir yelpaze sunar. Müşteri memnuniyetine verdiğimiz önemle Yummy, sadece bir yemek değil, bir deneyim sunar.
+                    </p>
+                   
+                </div>
+            </div><!-- End Why Box -->
+
+            <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+
+                    @foreach (var service in Model)
+                    {
+                        <div class="col-xl-4" data-aos="fade-up" data-aos-delay="@((Model.IndexOf(service) + 1) * 100)">
+                            <div class="icon-box d-flex flex-column justify-content-center align-items-center">
+
+                                <!-- Başlık -->
+                                <h4>@service.Title</h4>
+
+                                <!-- Açıklama -->
+                                <p>@service.Description</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+                    }
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

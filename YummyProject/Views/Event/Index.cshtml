@@ -1,0 +1,48 @@
+﻿@model List<YummyProject.Models.Event>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+
+    int count = 0;
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --ETKİNLİKLER--
+</h2>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Görsel URL</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Fiyat</th>
+        <th>SİL</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.ImageUrl</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.Price</td>
+            <td><a href="/Event/DeleteEvent/@item.EventId" class="btn btn-danger">SİL</a></td>
+
+        </tr>
+
+    }
+
+</table>
+<br />
+<div class="text-center mt-4">
+    <a href="/Event/AddEvent" class="btn btn-success btn-lg rounded-pill">
+        Etkinlik Ekle
+    </a>
+</div>
+
+
+

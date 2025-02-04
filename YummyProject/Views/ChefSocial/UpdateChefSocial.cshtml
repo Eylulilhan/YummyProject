@@ -1,0 +1,38 @@
+﻿@model YummyProject.Models.ChefSocial
+@{
+    ViewBag.Title = "UpdateChefSocial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="text-center text-success mb-4">Sosyal Medya Hesabını Güncelle</h2>
+
+@using (Html.BeginForm())
+{
+    
+    @Html.HiddenFor(model => model.ChefSocialId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Url, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Url, new { @class = "form-control", placeholder = "Sosyal medya URL'si" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.SocialMediaName, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.SocialMediaName, new { @class = "form-control", placeholder = "Sosyal Medya Adı (örn: Instagram)" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.Icon, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.Icon, new { @class = "form-control", placeholder = "İkon sınıfı (örn: fab fa-instagram)" })
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.ChefId, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.ChefId, new { @class = "form-control", placeholder = "Şef ID" })
+    </div>
+    <br />
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        @Html.ActionLink("İptal", "Index", "ChefSocial", null, new { @class = "btn btn-secondary ml-2" })
+    </div>
+}

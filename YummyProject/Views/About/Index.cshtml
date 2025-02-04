@@ -1,0 +1,46 @@
+﻿@model List<YummyProject.Models.About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<h2 class="text-success text-center pb-2 border-bottom border-success font-weight-bold display-9"
+    style="font-family: 'Arial', sans-serif;">
+    --HAKKIMIZDA--
+</h2>
+<br />
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Görsel URL 1</th>
+        <th>Madde 1</th>
+        <th>Madde 2</th>
+        <th>Madde 3</th>
+        <th>Açıklama</th>
+        <th>Video URL</th>
+        <th>Telefon</th>
+        <th>Görsel URL 2</th>
+        <th>GÜNCELLE</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <th>@item.ImageUrl</th>
+            <th>@item.Item1</th>
+            <th>@item.Item2</th>
+            <th>@item.Item3</th>
+            <th>@item.Description</th>
+            <th>@item.VideoUrl</th>
+            <th>@item.PhoneNumber</th>
+            <th>@item.ImageUrl2</th>
+            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-info">GÜNCELLE</a></td>
+        </tr>
+    }
+</table>
+<br />
+
+
