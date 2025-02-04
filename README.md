@@ -1,4 +1,4 @@
-# Restoran Yönetim Sistemi
+# Restoran Yönetim Sistemi (YUMMY)
 
 **Restoran Yönetim Sistemi**, restoran yönetimini daha verimli hale getirmek için geliştirilmiş bir yazılım projesidir. Admin paneli ve kullanıcı arayüzü ile iki temel bileşenden oluşur.
 
