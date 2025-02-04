@@ -28,8 +28,67 @@
 ## Neler Öğrendim?
 Bu projede hem teknik hem de tasarım açısından çok şey öğrendim. **LINQ** ile veriyi sorgulama yapmayı, **Authentication** ve **Authorization** konularında tecrübe kazandım. Bu süreçte öğrendiğim her şey, web geliştirme yolculuğumda bana çok büyük katkı sağladı.
 
+</br>
 <img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui1.png" alt="" width="1000">
 </br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui2.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui3.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui4.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui5.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui6.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui7.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui8.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui9.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/ui10.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin1.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin2.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin3.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin4.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin5.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin6.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin7.png" alt="" width="1000">
+</br>
+<img src="https://github.com/Eylulilhan/YummyProject/blob/master/YummyProject/yummy/admin8.png" alt="" width="1000">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
