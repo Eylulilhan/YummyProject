@@ -28,7 +28,7 @@
 ## Neler Öğrendim?
 Bu projede hem teknik hem de tasarım açısından çok şey öğrendim. **LINQ** ile veriyi sorgulama yapmayı, **Authentication** ve **Authorization** konularında tecrübe kazandım. Bu süreçte öğrendiğim her şey, web geliştirme yolculuğumda bana çok büyük katkı sağladı.
 
-<img src=""  width="300" height="200">
+<img src="YummyProject/Yummy/admin1"  width="600" height="500">
 
 
 
